@@ -3,30 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jet Squad - Sanky's Family</title>
+  <title>Captain Sanky - Jet Command</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1 class="animated-heading">🚀 Jet Squad: Go Family Go!</h1>
+  <div class="full-wrapper">
+    <h1 class="hero-title">🛩️ CAPTAIN SANKY'S JET COMMAND 🛩️</h1>
 
-  <div class="button-container">
-    <button onclick="showMessage('Go Madhu!')">Go Madhu!</button>
-    <button onclick="showMessage('Go Papa!')">Go Papa!</button>
-    <button onclick="showMessage('Go Mumma!')">Go Mumma!</button>
-    <button onclick="showMessage('Go Baba!')">Go Baba!</button>
-    <button onclick="showMessage('Go Dadi!')">Go Dadi!</button>
+    <div class="button-grid">
+      <button onclick="showMessage('🔥 GO MADHU! 🔥')">Go Madhu</button>
+      <button onclick="showMessage('💥 GO PAPA! 💥')">Go Papa</button>
+      <button onclick="showMessage('🚀 GO MUMMA! 🚀')">Go Mumma</button>
+      <button onclick="showMessage('⚡ GO BABA! ⚡')">Go Baba</button>
+      <button onclick="showMessage('🌟 GO DADI! 🌟')">Go Dadi</button>
+    </div>
+
+    <div id="blast-message"></div>
+
+    <footer>⚙️ Designed by <strong>Captain Sanky</strong> | Mission Code: JET-V2</footer>
   </div>
-
-  <div id="message"></div>
 
   <script>
     function showMessage(text) {
-      const msg = document.getElementById("message");
+      const msg = document.getElementById("blast-message");
       msg.textContent = text;
-      msg.classList.remove("fly");
-      void msg.offsetWidth; // reset animation
-      msg.classList.add("fly");
+      msg.classList.remove("blast");
+      void msg.offsetWidth;
+      msg.classList.add("blast");
     }
   </script>
 </body>
 </html>
+
