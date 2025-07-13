@@ -1,112 +1,119 @@
-/* Full Page Layout */
-html, body {
+/* Background: Jet force darkness */
+body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  width: 100%;
   font-family: 'Orbitron', sans-serif;
-  background: radial-gradient(circle at center, #102040 0%, #000814 100%);
-  color: #00eaff;
+  background-color: #000;
   overflow: hidden;
+  color: #fff;
 }
 
-/* Wrapper fills entire screen */
-.full-wrapper {
+/* Jet fighter background gradient + overlay fire */
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+  background: url('https://i.ibb.co/g6RJ5Lj/fire-background.gif') no-repeat center center/cover;
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
   padding: 20px;
-  box-sizing: border-box;
 }
 
-/* Glowing Heading */
-.hero-title {
-  font-size: 3.8em;
-  margin-bottom: 50px;
-  animation: zoomIn 1.2s ease-out;
-  text-shadow: 0 0 35px cyan, 0 0 10px #00eaff;
-  text-align: center;
+/* Heading */
+.main-title {
+  font-size: 3.5rem;
+  color: #ffcc00;
+  text-shadow: 0 0 20px #ffcc00, 0 0 40px red;
+  animation: pulse 2s infinite;
+  margin-bottom: 40px;
 }
 
-@keyframes zoomIn {
-  from {
-    transform: scale(0.3);
-    opacity: 0;
-  }
-  to {
+@keyframes pulse {
+  0%, 100% {
     transform: scale(1);
-    opacity: 1;
+    text-shadow: 0 0 20px #ffcc00, 0 0 40px red;
+  }
+  50% {
+    transform: scale(1.08);
+    text-shadow: 0 0 35px #ff0000, 0 0 60px orange;
   }
 }
 
-/* Button Grid */
-.button-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+/* Buttons */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 25px;
-  width: 100%;
-  max-width: 800px;
-  margin-bottom: 50px;
 }
 
 button {
-  padding: 16px 24px;
-  font-size: 1.1em;
-  background: linear-gradient(45deg, #007bff, #004080);
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: #ff0000;
   border: none;
-  border-radius: 14px;
+  border-radius: 12px;
   color: white;
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
-  transition: all 0.2s ease;
+  box-shadow: 0 0 12px #ff0000;
   cursor: pointer;
-  text-shadow: 0 0 5px black;
+  transition: all 0.25s ease;
 }
 
 button:hover {
-  background: linear-gradient(45deg, #00c6ff, #005eff);
+  background: #ff7700;
   transform: scale(1.15);
+  box-shadow: 0 0 30px #ff4500;
 }
 
-/* Flying Message */
-#blast-message {
-  font-size: 2em;
+/* Message Blast */
+#blast-text {
+  margin-top: 40px;
+  font-size: 2.5rem;
   font-weight: bold;
   color: #ffff00;
+  text-shadow: 0 0 20px #ff0, 0 0 40px #fff000;
   opacity: 0;
   height: 60px;
-  text-shadow: 0 0 15px #ff0, 0 0 25px #fff000;
 }
 
-.blast {
-  animation: flyUp 1.2s ease-out forwards;
+.explode {
+  animation: explodeAnim 1.2s ease-out forwards;
 }
 
-@keyframes flyUp {
+@keyframes explodeAnim {
   0% {
-    transform: translateY(20px) scale(0.8);
+    transform: scale(0.2) rotate(-20deg);
     opacity: 0;
   }
-  50% {
-    transform: translateY(0px) scale(1.2);
+  40% {
+    transform: scale(1.4) rotate(3deg);
     opacity: 1;
   }
   100% {
-    transform: translateY(-100px) scale(1);
+    transform: scale(1) rotate(0deg);
     opacity: 0;
   }
 }
 
-/* Footer stays at bottom */
+/* Footer */
 footer {
   position: absolute;
   bottom: 10px;
   width: 100%;
-  font-size: 14px;
-  color: #ccc;
-  text-shadow: 0 0 5px #00eaff;
   text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+  text-shadow: 0 0 10px #ff0;
 }
-
