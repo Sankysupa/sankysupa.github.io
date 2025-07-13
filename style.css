@@ -12,10 +12,14 @@ body, html {
   position: absolute;
   top: 0; left: 0;
   height: 100%; width: 100%;
-  background: url('https://media.giphy.com/media/WXKPMv9oRRbEY/giphy.gif') no-repeat center center/cover;
-  opacity: 0.25;
+  background: radial-gradient(circle at center, #ff5100, #000000 80%);
+  background-size: 400% 400%;
+  animation: firePulse 4s ease-in-out infinite;
   z-index: 0;
+  opacity: 0.4;
+  filter: blur(30px);
 }
+
 
 
 .main {
@@ -111,4 +115,15 @@ footer {
   font-size: 0.9rem;
   color: #aaa;
   text-shadow: 0 0 10px #ff0;
+}
+@keyframes firePulse {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
