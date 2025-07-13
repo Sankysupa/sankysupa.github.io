@@ -10,3 +10,68 @@
   </body>
 </html>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanky's Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Welcome to My Cool Website!</h1>
+
+  <!-- 🔹 IMAGE -->
+  <img src="profile.jpg" alt="My Profile" class="profile-pic" />
+
+  <!-- 🔹 BUTTON -->
+  <br />
+  <button onclick="sayHello()">Click Me!</button>
+
+  <!-- 🔹 ANIMATED TEXT -->
+  <p class="animated-text">Watch me bounce in!</p>
+
+  <script>
+    function sayHello() {
+      alert("Hi! I'm Sanky 👋");
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sanky's Awesome Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1 class="animated-text">Welcome to Sanky’s World 🌍</h1>
+
+  <!-- 🔹 Image -->
+  <img src="profile.jpg" alt="Sanky" class="profile-pic" />
+
+  <!-- 🔹 Button -->
+  <br /><br />
+  <button onclick="sayRandom()">Click Me!</button>
+
+  <!-- 🔹 Output Area -->
+  <p id="output"></p>
+
+  <!-- JavaScript -->
+  <script>
+    function sayRandom() {
+      const phrases = [
+        "Go Madhu!",
+        "Go Papa!",
+        "Go Mumma!",
+        "Go Baba!",
+        "Go Dadi!"
+      ];
+      const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+      document.getElementById("output").textContent = randomPhrase;
+    }
+  </script>
+</body>
+</html>
