@@ -1,76 +1,31 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My First Website!</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>Hello, I'm Sankarshan Jha!</h1>
-    <p>This is my first website. I made it myself! 🎉</p>
-  </body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sanky's Website</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <h1>Welcome to My Cool Website!</h1>
-
-  <!-- 🔹 IMAGE -->
-  <img src="profile.jpg" alt="My Profile" class="profile-pic" />
-
-  <!-- 🔹 BUTTON -->
-  <br />
-  <button onclick="sayHello()">Click Me!</button>
-
-  <!-- 🔹 ANIMATED TEXT -->
-  <p class="animated-text">Watch me bounce in!</p>
-
-  <script>
-    function sayHello() {
-      alert("Hi! I'm Sanky 👋");
-    }
-  </script>
-</body>
-</html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sanky's Awesome Page</title>
+  <title>Jet Squad - Sanky's Family</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1 class="animated-text">Welcome to Sanky’s World 🌍</h1>
+  <h1 class="animated-heading">🚀 Jet Squad: Go Family Go!</h1>
 
-  <!-- 🔹 Image -->
-  <img src="profile.jpg" alt="Sanky" class="profile-pic" />
+  <div class="button-container">
+    <button onclick="showMessage('Go Madhu!')">Go Madhu!</button>
+    <button onclick="showMessage('Go Papa!')">Go Papa!</button>
+    <button onclick="showMessage('Go Mumma!')">Go Mumma!</button>
+    <button onclick="showMessage('Go Baba!')">Go Baba!</button>
+    <button onclick="showMessage('Go Dadi!')">Go Dadi!</button>
+  </div>
 
-  <!-- 🔹 Button -->
-  <br /><br />
-  <button onclick="sayRandom()">Click Me!</button>
+  <div id="message"></div>
 
-  <!-- 🔹 Output Area -->
-  <p id="output"></p>
-
-  <!-- JavaScript -->
   <script>
-    function sayRandom() {
-      const phrases = [
-        "Go Madhu!",
-        "Go Papa!",
-        "Go Mumma!",
-        "Go Baba!",
-        "Go Dadi!"
-      ];
-      const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
-      document.getElementById("output").textContent = randomPhrase;
+    function showMessage(text) {
+      const msg = document.getElementById("message");
+      msg.textContent = text;
+      msg.classList.remove("fly");
+      void msg.offsetWidth; // reset animation
+      msg.classList.add("fly");
     }
   </script>
 </body>
