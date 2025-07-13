@@ -12,10 +12,11 @@ body, html {
   position: absolute;
   top: 0; left: 0;
   height: 100%; width: 100%;
-  background: url('https://i.ibb.co/g6RJ5Lj/fire-background.gif') no-repeat center center/cover;
+  background: url('https://media.giphy.com/media/WXKPMv9oRRbEY/giphy.gif') no-repeat center center/cover;
   opacity: 0.25;
   z-index: 0;
 }
+
 
 .main {
   position: relative;
