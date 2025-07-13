@@ -10,15 +10,18 @@ body, html {
 
 .overlay {
   position: absolute;
-  top: 0; left: 0;
-  height: 100%; width: 100%;
-  background: radial-gradient(circle at center, #ff5100, #000000 80%);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #ff1a00, #ff6600, #990000);
   background-size: 400% 400%;
-  animation: firePulse 4s ease-in-out infinite;
+  animation: flames 10s ease infinite;
   z-index: 0;
-  opacity: 0.4;
-  filter: blur(30px);
+  opacity: 0.35;
+  filter: blur(10px);
 }
+
 
 
 
